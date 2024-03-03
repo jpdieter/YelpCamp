@@ -1,11 +1,9 @@
 
 //if in development mode take .env package and take variables in file, add them to process.env in node app
 //define key value pairs in .env files for API
-// if (process.env.NODE_ENV !== "production") {
-
-// }
-
+if (process.env.NODE_ENV !== "production") {
 require('dotenv').config();
+}
 
 const express = require('express');
 const app = express();
@@ -27,12 +25,8 @@ const MongoStore = require('connect-mongo')(session);
 const userRoutes = require('./routes/users')
 const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/reviews');
-// const dbURL = process.env.DB_URL
-
-// const dbURL = 'mongodb://localhost:27017/YelpCamp'; /old code to connect locally
-// mongoose.connect(dbURL) old code to connect locally
-
-mongoose.connect(DB_URL)
+const dbURL = process.env.DB_URL || 'mongodb://localhost:27017/YelpCamp'; //enable once ready to deploy database to MongoDB Atlas
+mongoose.connect(dbURL)
     .then(() => {
         console.log("MONGO CONNECTION OPEN!!!")
     })
@@ -40,9 +34,10 @@ mongoose.connect(DB_URL)
         console.log("OH NO MONGO CONNECTION ERROR!!!!")
         console.log(err)
     })
-
-    app.listen(3000, () => {
-        console.log("Connected to Express!")
+    
+    const port = process.env.PORT || 3000;
+    app.listen(port, () => {
+        console.log(`Serving on port ${port}`)
     })
 
 
@@ -54,6 +49,8 @@ app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(mongoSanitize()); //will not allow any keys that contain a dollar sign or period in req.query to disable DB injections
+
+const secret = process.env.SECRET || 'ToLiveIsToSuffer1985!@#';
 
 const store = new MongoStore({
     url: dbURL, 
@@ -68,7 +65,7 @@ store.on("error", function(e){
 const sessionConfig = {
     store,
     name: 'session', //changes connect.sid default cookie name
-    secret: 'ToLiveIsToSuffer1985!@#',
+    secret,
     resave: false,
     saveUninitialized: true, 
     cookie: {
