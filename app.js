@@ -27,7 +27,11 @@ const MongoStore = require('connect-mongo')(session);
 const userRoutes = require('./routes/users')
 const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/reviews');
-const dbURL = 'mongodb://localhost:27017/YelpCamp'; //enable once ready to deploy database to MongoDB Atlas
+const dbURL = process.env.DB_URL
+
+// const dbURL = 'mongodb://localhost:27017/YelpCamp'; /old code to connect locally
+// mongoose.connect(dbURL) old code to connect locally
+
 mongoose.connect(dbURL)
     .then(() => {
         console.log("MONGO CONNECTION OPEN!!!")
@@ -53,7 +57,7 @@ app.use(mongoSanitize()); //will not allow any keys that contain a dollar sign o
 
 const store = new MongoStore({
     url: dbURL, 
-    secret: 'this should be a better secret!',
+    secret: 'ToLiveIsToSuffer1985!@#',
     touchAfter: 24 * 60 * 60
 });
 
@@ -64,7 +68,7 @@ store.on("error", function(e){
 const sessionConfig = {
     store,
     name: 'session', //changes connect.sid default cookie name
-    secret: 'this should be a better secret!',
+    secret: 'ToLiveIsToSuffer1985!@#',
     resave: false,
     saveUninitialized: true, 
     cookie: {
