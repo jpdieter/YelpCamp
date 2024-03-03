@@ -27,12 +27,12 @@ const MongoStore = require('connect-mongo')(session);
 const userRoutes = require('./routes/users')
 const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/reviews');
-const dbURL = process.env.DB_URL
+// const dbURL = process.env.DB_URL
 
 // const dbURL = 'mongodb://localhost:27017/YelpCamp'; /old code to connect locally
 // mongoose.connect(dbURL) old code to connect locally
 
-mongoose.connect(dbURL)
+mongoose.connect(DB_URL)
     .then(() => {
         console.log("MONGO CONNECTION OPEN!!!")
     })
