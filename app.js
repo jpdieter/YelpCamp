@@ -25,8 +25,8 @@ const MongoStore = require('connect-mongo')(session);
 const userRoutes = require('./routes/users')
 const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/reviews');
-// const dbURL = 'mongodb://localhost:27017/YelpCamp';
-const dbURL = 'mongodb://localhost:27017/YelpCamp' || process.env.DB_URL; //enable once ready to deploy database to MongoDB Atlas
+const dbURL = process.env.DB_URL || 'mongodb://localhost:27017/YelpCamp';
+// const dbURL = process.env.DB_URL || 'mongodb://localhost:27017/YelpCamp'; //enable once ready to deploy database to MongoDB Atlas
 mongoose.connect(dbURL)
     .then(() => {
         console.log("MONGO CONNECTION OPEN!!!")
