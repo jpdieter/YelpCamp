@@ -71,14 +71,14 @@ if (process.env.NODE_ENV !== "production") {
         saveUninitialized: true, 
         cookie: {
             httpOnly: true, //cookies can only be used with http and not javascript. prevents xss attack to extract cookies from site.
-            secure: false, //required cookies to be used only over https
+            secure: true, //required cookies to be used only over https
             expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
             maxAge: 1000 * 60 * 60 * 24 * 7,
         }
     }
     app.use(session(sessionConfig))
     app.use(flash());
-    app.use(helmet({contentSecurityPolicy:false}));
+    app.use(helmet({contentSecurityPolicy:true}));
     
     const scriptSrcUrls = [
         "https://stackpath.bootstrapcdn.com/",
