@@ -23,6 +23,7 @@ if (process.env.NODE_ENV !== "production") {
     
     //require routes
     const userRoutes = require('./routes/users')
+    //testing app.js
     const campgroundRoutes = require('./routes/campgrounds');
     const reviewRoutes = require('./routes/reviews');
     // const dbURL = 'mongodb://localhost:27017/YelpCamp'; //enable when working locally
