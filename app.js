@@ -71,7 +71,7 @@ if (process.env.NODE_ENV !== "production") {
         saveUninitialized: true, 
         cookie: {
             httpOnly: true, //cookies can only be used with http and not javascript. prevents xss attack to extract cookies from site.
-            secure: true, //required cookies to be used only over https
+            secure: false, //required cookies to be used only over https
             expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
             maxAge: 1000 * 60 * 60 * 24 * 7,
         }
