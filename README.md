@@ -1,4 +1,4 @@
-# YelpCamp# Yelp-Camp
+# YelpCamp
 
 Yelp-like full-stack web application from the 2024 Web Developer Bootcamp.
 
