@@ -50,6 +50,10 @@ if (process.env.NODE_ENV !== "production") {
     app.use(methodOverride('_method'));
     app.use(express.static(path.join(__dirname, 'public')))
     app.use(mongoSanitize()); //will not allow any keys that contain a dollar sign or period in req.query to disable DB injections
+
+    if (app.get('env') === 'production') {
+        app.set('trust proxy', 1) // trust first proxy
+      }
     
     const secret = process.env.SECRET || 'ToLiveIsToSuffer1985!@#';
     
