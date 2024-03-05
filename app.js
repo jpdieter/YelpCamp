@@ -72,6 +72,7 @@ if (process.env.NODE_ENV !== "production") {
         cookie: {
             httpOnly: true, //cookies can only be used with http and not javascript. prevents xss attack to extract cookies from site.
             secure: true, //required cookies to be used only over https
+            proxy : true, // add this when behind a reverse proxy, if you need secure cookies
             expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
             maxAge: 1000 * 60 * 60 * 24 * 7,
         }
