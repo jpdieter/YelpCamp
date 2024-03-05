@@ -101,7 +101,8 @@ if (process.env.NODE_ENV !== "production") {
         "https://fonts.googleapis.com/",
         "https://use.fontawesome.com/",
         "https://kit.fontawesome.com/",
-        "https://fonts.google.com/"
+        "https://fonts.google.com/",
+        "https://cdn.jsdelivr.net"
     ];
     const connectSrcUrls = [
         "https://api.mapbox.com/",
