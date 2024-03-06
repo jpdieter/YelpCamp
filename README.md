@@ -42,3 +42,25 @@ YelpCamp is a full-stack web application where users can explore and review camp
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^8.0.0",
     "sanitize-html": "^2.12.1"
+
+## Planning and Designing
+
+* Define the features and functionality of YelpCamp, including user authentication, campground listings, reviews, etc.
+
+## Building the Frontend:
+* Develop the frontend using HTML, CSS, and JavaScript.
+* Use templating engine EJS to generate dynamic HTML content.
+* Design responsive layouts using the CSS framework Bootstrap.
+* Implement client-side form validation and error handling with JavaScript.
+
+## Creating the Backend:
+* Set up the backend server using Node.js and Express.js.
+* Configure middleware for handling requests, parsing JSON, and serving static files.
+* Implement user authentication using Passport.js with the Local Strategy.
+* Define database models using MongoDB and Mongoose for campgrounds, users, and reviews.
+* Create RESTful routes for CRUD operations on campgrounds and reviews.
+
+## Integrating User Authentication:
+* Create routes for user authentication, including registration, login, and logout.
+* Implement authentication middleware to protect routes that require user authentication.
+* Set up sessions and cookies for managing user sessions.
