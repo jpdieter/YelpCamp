@@ -20,3 +20,25 @@ YelpCamp is a full-stack web application where users can explore and review camp
 9. RESTful Routing: The application follows RESTful routing principles to structure the URLs and routes logically.
 10. Data Persistence: Campground data is stored in a database, typically MongoDB, to ensure that information is persistent across sessions.
 
+## Dependencies 
+    "@mapbox/mapbox-sdk": "^0.15.3",
+    "cloudinary": "^1.41.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
+    "dotenv": "^16.4.4",
+    "ejs": "^3.1.9",
+    "ejs-mate": "^4.0.0",
+    "express": "^4.18.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-session": "^1.18.0",
+    "helmet": "^7.1.0",
+    "joi": "^17.11.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.0.3",
+    "multer": "^1.4.5-lts.1",
+    "multer-storage-cloudinary": "^4.0.0",
+    "nodemon": "^3.0.2",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^8.0.0",
+    "sanitize-html": "^2.12.1"
