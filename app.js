@@ -58,7 +58,7 @@ if (process.env.NODE_ENV !== "production") {
     
     const store = new MongoStore({
         url: dbURL, 
-        secret: 'ToLiveIsToSuffer1985!@#',
+        secret,
         touchAfter: 24 * 60 * 60
     });
     
