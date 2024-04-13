@@ -102,19 +102,17 @@ Install node, using the Node Version Manager.
 
 Alternatively, you can use nodemon to run the app.
 
-```
 git clone git@github.com:jpdieter/YelpCamp.git
 cd YelpCamp
 npm install
-```
 
 I am using SSH based authentication. The alternative for token-based authentication is:
 
-https://github.com/jpdieter/YelpCamp.git
+`https://github.com/jpdieter/YelpCamp.git`
 
 Create a .env file (or just export manually in the terminal), and run this command:
 
-cp sample.env .env
+`cp sample.env .env`
 
 Run mongod in another terminal and node app.js or nodemon app.js in the terminal with the project.
 
