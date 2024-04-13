@@ -11,7 +11,6 @@ YelpCamp is a full-stack web application that enables users to explore and revie
 ## Table of Contents
 
 - [Features](#features)
-- [Dependencies](#dependencies)
 - [Planning and Designing](#planning-and-designing)
 - [Running it locally](#running-it-locally)
 
@@ -27,29 +26,6 @@ YelpCamp is a full-stack web application that enables users to explore and revie
 * Responsive Design: Enjoy seamless usability across devices.
 * Logical RESTful Routing: Navigate intuitively with structured URL patterns.
 * Persistent Data Storage: Ensure data continuity and reliability with MongoDB.
-
-## Dependencies 
-    "@mapbox/mapbox-sdk": "^0.15.3",
-    "cloudinary": "^1.41.3",
-    "connect-flash": "^0.1.1",
-    "connect-mongo": "^3.2.0",
-    "dotenv": "^16.4.4",
-    "ejs": "^3.1.9",
-    "ejs-mate": "^4.0.0",
-    "express": "^4.18.2",
-    "express-mongo-sanitize": "^2.2.0",
-    "express-session": "^1.18.0",
-    "helmet": "^7.1.0",
-    "joi": "^17.11.0",
-    "method-override": "^3.0.0",
-    "mongoose": "^8.0.3",
-    "multer": "^1.4.5-lts.1",
-    "multer-storage-cloudinary": "^4.0.0",
-    "nodemon": "^3.0.2",
-    "passport": "^0.7.0",
-    "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^8.0.0",
-    "sanitize-html": "^2.12.1"
 
 ## Planning and Designing
 
