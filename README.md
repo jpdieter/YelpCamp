@@ -4,7 +4,7 @@ Live App: https://yelpcamp-s39h.onrender.com/
 
 ## Introduction
 
-YelpCamp is a full-stack web application where users can explore and review campgrounds. The application covers a range of web development concepts and technologies, including front-end development with HTML, CSS, and JavaScript, back-end development with Node.js and Express.js, database management with MongoDB, user authentication, and more.
+YelpCamp is a full-stack web application that enables users to explore and review campgrounds. It provides a comprehensive platform for discovering and sharing experiences at various campgrounds, making it ideal for camping enthusiasts looking to plan their next adventure or seek inspiration from others in the community.
 
 ![Library Image](public/images/YelpCamp.png)
 
