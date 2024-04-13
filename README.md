@@ -8,6 +8,7 @@
 - [Features](#features)
 - [Dependencies](#dependencies)
 - [Planning and Designing](#planning-and-designing)
+- [Running it locally](#running-it-locally)
 
 ## Introduction
 
