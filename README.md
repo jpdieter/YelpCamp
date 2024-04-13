@@ -1,12 +1,12 @@
 ## YelpCamp
 
+![YelpCamp Image](public/images/YelpCamp.png)
+
 Live App: https://yelpcamp-s39h.onrender.com/
 
 ## Introduction
 
 YelpCamp is a full-stack web application that enables users to explore and review campgrounds. It provides a comprehensive platform for discovering and sharing experiences at various campgrounds, making it ideal for camping enthusiasts looking to plan their next adventure or seek inspiration from others in the community.
-
-![Library Image](public/images/YelpCamp.png)
 
 ## Features:
 
