@@ -94,26 +94,36 @@ YelpCamp is a full-stack web application that enables users to explore and revie
 
 ## Running it locally:
 
-1. Install mongodb.
-2. Create a cloudinary account to get an API key and secret code.
-3. Create a mapbox account to get a token.
+1. **Install MongoDB.**
+2. **Create Accounts:**
+    - Create a Cloudinary account to obtain an API key and secret code.
+    - Create a Mapbox account to get an access token.
 
-Install node, using the Node Version Manager.
+3. **Install Node:**
+    - You can use the Node Version Manager (nvm) for installation.
 
-Alternatively, you can use nodemon to run the app.
+4. **Clone Repository:**
+    ```
+    git clone git@github.com:jpdieter/YelpCamp.git
+    cd YelpCamp
+    npm install
+    ```
 
-git clone git@github.com:jpdieter/YelpCamp.git
-cd YelpCamp
-npm install
+5. **SSH-Based Authentication:**
+    - If using SSH-based authentication:
+        ```
+        git clone git@github.com:jpdieter/YelpCamp.git
+        ```
 
-I am using SSH based authentication. The alternative for token-based authentication is:
+6. **Environment Variables:**
+    - Create a `.env` file or manually export variables in the terminal:
+        ```
+        cp sample.env .env
+        ```
 
-`https://github.com/jpdieter/YelpCamp.git`
-
-Create a .env file (or just export manually in the terminal), and run this command:
-
-`cp sample.env .env`
-
-Run mongod in another terminal and node app.js or nodemon app.js in the terminal with the project.
-
-Then go to localhost:3000
+7. **Run the Application:**
+    - Open another terminal and run:
+        - `mongod`
+    - Run the application:
+        - `node app.js` or `nodemon app.js` if using nodemon.
+    - Access the application at `localhost:3000`.
