@@ -2,7 +2,7 @@
 
 ![YelpCamp Image](public/images/YelpCamp.png)
 
-Live App: https://yelpcamp-s39h.onrender.com/
+<!-- Live App: https://yelpcamp-s39h.onrender.com/ -->
 
 ## Introduction
 
