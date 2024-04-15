@@ -149,13 +149,7 @@ if (process.env.NODE_ENV !== "production") {
         res.locals.error = req.flash('error');
         next();
     })
-    
-    // app.get('/fakeUser',async (req, res) => {
-    //     const user = new User({email: 'justin@gmail.com', username: 'justinnn'})
-    //     const newUser = await User.register(user, 'chicken');
-    //     res.send(newUser);
-    // })
-    
+      
     //used to set middleware routes and link path to a 
     app.use('/', userRoutes)
     app.use('/campgrounds', campgroundRoutes)
@@ -174,9 +168,3 @@ if (process.env.NODE_ENV !== "production") {
         if(!err.message) err.message='Oh No, Something Went Wrong!'
         res.status(statusCode).render('error', {err});
     })
-    
-    // app.get('/makecampground', async (req, res) => {
-    //     const camp = new Campground ({title: 'My Backyard', description: 'cheap camping'})
-    //     await camp.save()
-    //     res.send(camp)
-    // })
