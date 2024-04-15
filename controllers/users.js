@@ -52,3 +52,37 @@ module.exports.logout = (req, res, next) => {
         res.redirect('/campgrounds');
     });
 }
+
+module.exports.renderresetpassword = function (req, res) {
+    res.render('users/resetpassword', { user: req.user });
+};
+
+module.exports.resetpassword = function (req, res) {
+    // Find the user based on the provided username
+    User.findOne({ username: req.body.username })
+        .then(user => {
+            // If user not found, set an error flash message and render the reset password page
+            if (!user) {
+                req.flash('error', 'Incorrect username or password');
+                return res.render('users/resetpassword', { user: req.user, error: req.flash('error') });
+            }
+
+            // If user is found, attempt to change the password
+            return user.changePassword(req.body['current-password'], req.body['new-password'])
+                .then(() => {
+                    // If password change is successful, set a success flash message and render the reset password page
+                    req.flash('success', 'Successfully changed password');
+                    return res.render('users/resetpassword', { user: req.user, success: req.flash('success') });
+                })
+                .catch(err => {
+                    // If there's an error during password change, set an error flash message and render the reset password page
+                    req.flash('error', err.message || 'Failed to change password');
+                    return res.render('users/resetpassword', { user: req.user, error: req.flash('error') });
+                });
+        })
+        .catch(err => {
+            // If there's an error finding the user, set an error flash message and render the reset password page
+            req.flash('error', err.message || 'An error occurred');
+            return res.render('users/resetpassword', { user: req.user, error: req.flash('error') });
+        });
+};
