@@ -16,16 +16,17 @@ YelpCamp is a full-stack web application that enables users to explore and revie
 
 ## Features:
 
-* Secure User Authentication: Easily sign up, log in, and access exclusive features like adding new campgrounds and leaving reviews.
-* Comprehensive Campground Listings: Browse detailed campsite information including reviews, ratings, amenities, and photos.
-* User Contributions: Enrich the platform by adding new campgrounds with essential details and images.
-* Adding New Campgrounds: Registered users can add new campgrounds to the platform. This typically involves providing information such as name, description, location, and uploading images.
-* Reviews and Ratings: Share experiences to help others make informed decisions.
-* Interactive Maps: Explore campground locations with ease.
-* Efficient Search and Filtering: Find campgrounds based on location, amenities, or ratings.
-* Responsive Design: Enjoy seamless usability across devices.
-* Logical RESTful Routing: Navigate intuitively with structured URL patterns.
-* Persistent Data Storage: Ensure data continuity and reliability with MongoDB.
+* Easy Authentication: Streamlined signup, login, and access to exclusive features.
+* Detailed Listings: Access comprehensive campground info, including reviews and amenities.
+* User Contributions: Enrich the platform by adding new campground details and images.
+* Campground Management: Add and manage new campgrounds with ease.
+* Password Reset: Securely reset forgotten passwords for enhanced account security.
+* Reviews and Ratings: Share experiences to inform others' decisions.
+* Interactive Maps: Explore campground locations effortlessly.
+* Efficient Search: Find campgrounds based on location, amenities, or ratings.
+* Responsive Design: Enjoy seamless usability across all devices.
+* Intuitive Routing: Navigate logically with structured URL patterns.
+* Reliable Data Storage: Ensure data continuity and reliability using MongoDB.
 
 ## Planning and Designing
 
