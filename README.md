@@ -20,7 +20,7 @@ YelpCamp is a full-stack web application that enables users to explore and revie
 * Detailed Listings: Access comprehensive campground info, including reviews and amenities.
 * User Contributions: Enrich the platform by adding new campground details and images.
 * Campground Management: Add and manage new campgrounds with ease.
-* Password Reset: Securely reset forgotten passwords for enhanced account security.
+* User Password Reset: Securely enable users to reset their own passwords.
 * Reviews and Ratings: Share experiences to inform others' decisions.
 * Interactive Maps: Explore campground locations effortlessly.
 * Efficient Search: Find campgrounds based on location, amenities, or ratings.
