@@ -17,6 +17,10 @@ router.route('/login')
 
 router.get('/logout', users.logout); 
 
+router.route('/resetpassword')
+    .get(users.renderresetpassword)
+    .post(users.resetpassword)
+
 // router.post('/login',
 // // use the storeReturnTo middleware to save the returnTo value from session to res.locals
 // storeReturnTo,
@@ -24,6 +28,7 @@ router.get('/logout', users.logout);
 // passport.authenticate('local', {failureFlash: true, failureRedirect: '/login'}), users.login
 // // Now we can use res.locals.returnTo to redirect the user after login
 // );
+
 
 
 module.exports = router;
