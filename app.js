@@ -21,6 +21,16 @@ if (process.env.NODE_ENV !== "production") {
     const helmet = require('helmet');
     const MongoStore = require('connect-mongo')(session); //uses Mongo to store session info rather than using express memory
     
+    // Set up rate limiter: maximum of twenty requests per minute
+    const RateLimit = require("express-rate-limit");
+    const limiter = RateLimit({
+    windowMs: 1 * 60 * 1000, // 1 minute
+    max: 40,
+    validate: {xForwardedForHeader: false},
+    });
+    // Apply rate limiter to all requests
+    app.use(limiter);    
+
     //require routes
     const userRoutes = require('./routes/users')
     const campgroundRoutes = require('./routes/campgrounds');
